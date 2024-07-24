@@ -32,18 +32,35 @@
     <title>TravelApp</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Candy+Inc:wght@400;700&display=swap">
 </head>
 
 <body>
-    <header>
-        <h1>Your Next Vacation</h1>
+    <header class="app-header">
+        <h1 style="font-family: 'Brush Script MT', cursive; font-size: 50px;">Your Next Vacation</h1>
     </header>
-    <form id="travelDestination">
-        <input type="text" name="country">
-        <input type="text" name="city">
-        <input type="text" name="date">
-        <button>Submit</button>
-    </form>
+    <div class="form-container">
+        <form id="user-form" class="modern-form">
+            <h2>Enter Your Details</h2>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" name="country" id="country" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" name="city" id="country" required>
+            </div>
+            <div class="form-group">
+                <label for="arrivalDate">Arrival Date</label>
+                <input type="date" name="arrivalDate" id="arrivalDate" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="container">
+
+    </div>
 
     <script src="app.js"></script>
 
