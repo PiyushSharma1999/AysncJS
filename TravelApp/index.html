@@ -32,13 +32,16 @@
     <title>TravelApp</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Candy+Inc:wght@400;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Dancing+Script&family=Great+Vibes&family=Courgette&display=swap">
 </head>
 
 <body>
+
     <header class="app-header">
-        <h1 style="font-family: 'Brush Script MT', cursive; font-size: 50px;">Your Next Vacation</h1>
+        <h1>Your Next Vacation</h1>
     </header>
+    <div class=".content"></div>
     <div class="form-container">
         <form id="user-form" class="modern-form">
             <h2>Enter Your Details</h2>
@@ -48,7 +51,7 @@
             </div>
             <div class="form-group">
                 <label for="city">City</label>
-                <input type="text" name="city" id="country" required>
+                <input type="text" name="city" id="city" required>
             </div>
             <div class="form-group">
                 <label for="arrivalDate">Arrival Date</label>
@@ -58,15 +61,37 @@
         </form>
     </div>
 
+    <div class="top6title">
+        <h2>Top Destinations</h2>
+    </div>
+
     <div class="container">
 
     </div>
+
+    <div class="weather-container">
+
+    </div>
+    </div>
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/piyush331" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/PiyushSharma1999" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:piyush316692@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
 
     <script src="app.js"></script>
-
-    <div class="container">
-
-    </div>
 </body>
 
 </html>

@@ -6,18 +6,40 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    width: 100%;
+}
+
+.top6title {
+    text-align: center;
+    color: #666;
+    display: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: bold;
 }
 
 .app-header {
-    background-color: #e1dc9d;
-    color: #794141;
+    background-color: #333;
+    color: #ddd;
     /* padding: 20px; */
     text-align: center;
-    font-size: 24px;
-    border-radius: 5px;
+    /* font-size: 24px; */
     /* margin: 20px; */
     width: 100%;
     max-width: 100%;
+}
+
+.app-header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    margin: 5px 0;
+    font-weight: bold;
 }
 
 .form-container {
@@ -82,19 +104,68 @@ button[type="submit"]:hover {
     background-color: #613434;
 }
 
+.weather-container {
+    background: #e1dc9d;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin-bottom: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.weather-container p {
+    text-align: center;
+    margin: 10px 0;
+    color: #666;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.weather-container img {
+    display: block;
+    margin: 0 auto;
+}
+
+.weather-container h2 {
+    text-align: center;
+    margin: 10px 0;
+    color: #666;
+}
+
+.weather-detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    color: #666;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .container div {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover effects */
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: space-between;
+    /* Space out content evenly */
+    height: 600px;
+    /* Fixed height for consistency */
+    overflow: hidden;
+    /* Hide overflow content */
 }
 
 .container div h1 {
@@ -105,13 +176,29 @@ button[type="submit"]:hover {
 
 .container div img {
     width: 100%;
-    height: 70%;
-    border-radius: 8px;
+    height: 400px;
+    /* Fixed height for images */
+    object-fit: cover;
+    /* Ensure images cover the area without distortion */
+    border-radius: 12px;
+    /* Match the border radius of the container */
+    margin-bottom: 10px;
+    /* Space between image and text */
+}
+
+.container div:hover {
+    transform: translateY(-5px);
+    /* Lift item on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow on hover */
 }
 
 .container div p {
     font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    margin: 0;
+    /* Remove default margin */
 }
 
 @media (max-width: 768px) {
@@ -124,4 +211,33 @@ button[type="submit"]:hover {
     .container {
         grid-template-columns: 1fr;
     }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer-icons a:hover {
+    color: #ddd;
 }
