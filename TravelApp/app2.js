@@ -27,7 +27,7 @@
 
 
 const getWeather = async function (lat, lon) {
-    const params = { lat: lat, lon: lon, appid: "dfaa7187bcac69ceecd6082dc3945676" };
+    const params = { lat: lat, lon: lon, appid: "******" };
     const response = await axios.post(`https://api.openweathermap.org/data/2.5/weather?lat=${params.lat}&lon=${params.lon}&appid=${params.appid}`);
     return response.data;
 }
